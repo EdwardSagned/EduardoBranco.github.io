@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De-bloating Windows 11</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        .center {
+            text-align: center;
+        }
+        body {
+            font-family: 'system-ui', sans-serif; /* Use system-ui font */
+            color: #333;
+            background-color: #fff;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        }
+        .navbar {
+            background-color: #333;
+            color: #fff;
+        }
+        .navbar a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px 10px;
+        }
+        .content h1, .content h2, .content h3, .content h4, .content h5 {
+            color: #6a0dad;
+            font-weight: bold; /* Bold titles */
+        }
+        .content h1 {
+            padding-top: 1cm;
+            font-size: 3rem;
+        }
+        .content h2 {
+            font-size: 2.5rem;
+            margin-top: 20px;
+        }
+        .content h3 {
+            font-size: 2rem;
+            margin-top: 15px;
+        }
+        .content h4 {
+            font-size: 1.75rem;
+            margin-top: 10px;
+        }
+        .content h5 {
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+        .content p {
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        .content img {
+            text-align: center;
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+        }
+        .quote-box {
+            background-color: #f9f9f9;
+            border-left: 10px solid #6a0dad;
+            margin: 20px 0;
+            padding: 20px;
+            font-style: italic;
+            color: #555;
+        }
+        .install-box {
+            background-color: #e6e6e6;
+            border-radius: 15px;
+            padding: 2%;
+            margin: 20px 0;
+        }
+        .install-step {
+            padding: 2%;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .install-step h3 {
+            display: flex;
+            align-items: center;
+            font-size: 1.75rem;
+            font-weight: bold; /* Bold titles */
+        }
+        .install-step h3 i {
+            margin-right: 10px;
+            color: #6a0dad;
+        }
+        .install-step p i {
+            margin-right: 10px;
+            color: #6a0dad;
+        }
+        .install-step img {
+            width: 100%;
+        }
+        .console {
+            background-color: #262626;
+            color: #6a0dad;
+            font-family: Consolas, monospace;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 15px; /* Rounded corners for console */
+            position: relative;
+        }
+        .copy-button {
+            position: absolute;
+            right: 10px;
+            background-color: #6a0dad;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .copy-button:hover {
+            background-color: #450d5f; /* Darker shade of purple */
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .benchmark-section {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        .benchmark-section h2 {
+            color: #6a0dad;
+            font-weight: bold;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .benchmark-section p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .benchmark-section img {
+            padding-right: 20px;
+        }
+        .jump-to-conclusion {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .jump-to-conclusion button {
+            background-color: #6a0dad;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .jump-to-conclusion button:hover {
+            background-color: #450d5f; /* Darker shade of purple */
+        }
+        .large-bold {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .guia {
+            text-align: left;
+        }
+        .align-center {
+            text-align: center;
+        }
+        .dark-mode {
+            background-color: #262626;
+            color: #ccc;
+        }
+        .dark-mode .quote-box {
+            background-color: #333;
+            color: #ccc;
+        }
+        .dark-mode .install-box {
+            background-color: #333;
+            color: #ccc;
+        }
+        .dark-mode .benchmark-section{
+            background-color: #333;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+            <a class="navbar-brand" href="index.html"> Eduardo Santos Branco</a>
+            
+            <button class="btn btn-outline-light ml-auto" id="toggle-dark-mode">Night Mode</button>
+        </nav>
+    </header>
+    <div class="content container">
+        <h1>De-bloating Windows 11</h1>
+        <div class="quote-box">
+            <p>If you follow this toturial, you can get more performance out of your PC for free.</p>
+        </div>
+        <img src="images/processos.png" alt="Project Image">
+        <p>Nowadays, it's widely recognized that big corporations prioritize maximizing profits, often overwhelming free users with unnecessary features. Microsoft, with its recent products Windows 10 and 11, is notorious for including bloatware that hampers system performance. The worst part is how difficult and time-consuming it can be to uninstall or disable these features. This also raises privacy concerns due to the extensive telemetry data Microsoft collects. This tutorial will guide you through a quick and easy way to configure the latest Windows to your preferences. </p>
+        <p>For this we are going to use an open-source free tool called <a href="https://christitus.com/windows-tool/">Chris Titus Tech Tool</a>, a tool AIO (all in one) made by a famous Youtuber in the technology space. Gains of 20% are possible after using this tool, of course this depends on your system.</p>
+
+        <div class="jump-to-conclusion">
+            <button onclick="jumpToConclusion()">Jump to Conclusion</button>
+        </div>
+
+        <div class="install-box">
+            <h1 class="align-center">Install</h1>
+            <div class="install-step row">
+                <div class="col-md-2">
+                    <h3>Step 1</h3>
+                </div>
+                <div class="col-md-6">
+                    <p><i class="fas fa-caret-right"></i> Search for Power Shell on your Windows.</p>
+                    <p><i class="fas fa-caret-right"></i> Right click and run it as administrator.</p>
+                    <p><i class="fas fa-caret-right"></i> Accept the administrator permissions and advance to the next step</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/passo1.png" alt="Open PowerShell">
+                </div>
+            </div>
+            <div class="install-step row">
+                <div class="col-md-2">
+                    <h3>Step 2</h3>
+                </div>
+                <div class="col-md-6">
+                    <p><i class="fas fa-caret-right"></i> Write the next command on the Power Shell console.</p>
+                    <div class="console">iwr -useb https://christitus.com/win | iex
+                        <button class="copy-button" onclick="copyCommand()">Copy</button>
+                    </div>
+                    <p><i class="fas fa-caret-right"></i> Press Enter and wait. The program will automatically install and open.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/passo2.png" alt="Run Command">
+                </div>
+            </div>
+        </div>
+
+        <h1 class="guia">Program Guide</h1>
+        <p class="large-bold">This program consists of 5 tabs </p>
+
+        <h3>Install</h3>
+        <p> Here you can install and/or update famous aplications in a quick and easy way. It uses commands to get aplications via WinGet. </p>
+        <div class="center">
+            <img class="center" src="images/install.png" alt="Install Tab">
+        </div>
+        <h3>Tweaks</h3>
+        <p>Here is the main part of this program, it can deactivate some programs and telemetry on Windows making you PC have more avaiable resources. There are 2 profiles that select diferent tweaks, its recomended that you use the Standard profile which selects most of the sripts to run, the Minimal profile selects only the main scripts to run, it's less intrusive and faster to run.</p>
+        <p>We used the following scripts for testing:</p>
+        <div class="center">
+            <img class="center" src="images/tweaks.png" alt="Tweaks Tab">
+        </div>
+        <h3>Config</h3>
+        <p>Enables you to personalize some more advanced Windows settings, we don't recommend using this part of the program if you don't know what it means. There are also the main Windows Legacy Menus in a shortcut list.</p>
+        <div class="center">
+            <img class="center" src="images/config.png" alt="Configs Tab">
+        </div>
+        <h3>Updates</h3>
+        <p>Enables you to select one of 3 updates states. Default, Security and Disable all updates. This connects to Windows Updates Services and makes it so you recieve only part of the updates, if you want to use this, its recommended to use the Security Profile.</p>
+        <div class="center">
+            <img class="center" src="images/updates.png" alt="Updates Tab">
+        </div>
+        <h3>MicroWin</h3>
+        <p>This is a usefull tool for more advanced users or companies, its used to make a personalized Windows install disk/image, it makes the process of setting up new PC's much faster in larger deployments.</p>
+        <div class="center">
+            <img class="center" src="images/microwin.png" alt="Updates Tab">
+        </div>
+        
+
+        <div class="benchmark-section">
+            <h1 class="align-center">Conclusion</h1>
+            <p style="padding-top: 1cm;"> This tool was tested on Windows 11 Pro, this system is for personal use and used for education, games, and entertainment. The PC has the following specs:</p>
+            <p>CPU: Intel i5 12400F,RAM: 16GB DDR4 2666Mhz GPU:RTX 3060 12GB  </p>
+            <p>After running the Standart selection of scripts and restarting the system, we registered a gain of 3% on average frames per second on the Rainbow Six Siege benchmark tool. It's important to highlight that the less free resources your PC has, the most these tweaks will impact your system positively, gains of 20% are possible on slower, older or used machines.</p>
+            <p>These are the FPS benchamark results we got before and after.</p>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="align-center">Before</h2>
+                    <img src="images/antes.png" alt="Performance before">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="align-center">After</h2>
+                    <img src="images/depois.png" alt="Performance after">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <!-- Copyright -->
+        <div
+            class="text-center p-3"
+            style="background-color: rgba(0, 0, 0, 0.2)"
+            >
+          © 2024 Copyright:
+          <a class="text-white" href="https://github.com/EdwardSagned"
+            >Eduardo Santos Branco</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        function jumpToConclusion() {
+            globalThis.scrollTo({ top: 9000, left: 0, behavior: "smooth" });
+
+        }
+
+        function copyCommand() {
+            const copyText = 'iwr -useb https://christitus.com/win | iex';
+            navigator.clipboard.writeText(copyText).then(() => {
+                alert('Comando copiado para a área de transferência!');
+            });
+        }
+
+        document.getElementById('toggle-dark-mode').addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                this.textContent = 'Light Mode';
+            } else {
+                this.textContent = 'Night Mode';
+            }
+        });
+    </script>
+</body>
+</html>

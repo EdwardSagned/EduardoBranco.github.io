@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to set up a virtual machine.</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'system-ui', sans-serif;
+            color: #333;
+            background-color: #fff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar {
+            background-color: #333;
+            color: #fff;
+        }
+        .navbar a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px 10px;
+        }
+        .content h1, .content h2, .content h3, .content h4, .content h5 {
+            color: #6a0dad;
+            font-weight: bold;
+        }
+        .content h1 {
+            padding-top: 1cm;
+            font-size: 3rem;
+        }
+        .content h2 {
+            font-size: 2.5rem;
+            margin-top: 20px;
+        }
+        .content h3 {
+            font-size: 2rem;
+            margin-top: 15px;
+        }
+        .content p {
+            text-align: justify;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        .quote-box {
+            background-color: #f9f9f9;
+            border-left: 10px solid #6a0dad;
+            margin: 20px 0;
+            padding: 20px;
+            font-style: italic;
+            color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .dark-mode {
+            background-color: #262626;
+            color: #ccc;
+        }
+        .dark-mode .quote-box {
+            background-color: #333;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+            <a class="navbar-brand" href="index.html">Eduardo Santos Branco</a>
+            <button class="btn btn-outline-light ml-auto" id="toggle-dark-mode">Night Mode</button>
+        </nav>
+    </header>
+    <div class="content container">
+        <h1>How to set up a virtual machine</h1>
+        <div class="quote-box">
+            <p>If you follow this tutorial, you'll have a working virtual machine for testing on your PC.</p>
+        </div>
+        <img src="images/final.png" alt="Project Image">
+        <p>In today's digital age, the internet is essential, but it's also fraught with risks. Malicious websites, apps that spy on you, and viruses that can disable your computer or steal your data are common threats. It can be challenging to determine which files, apps, or websites are trustworthy. This is where virtual machines (VMs) come into play. </p>
+        <h2>What is a Virtual Machine</h2>
+        <p>A virtual machine (VM) is a software-based emulation of a physical computer. It runs an operating system and applications just like a physical computer, but within a virtual environment. VMs are created and managed by a hypervisor, which allocates physical hardware resources to each VM, ensuring they operate independently of the host system and other VMs.</p>
+        <p>
+            The key features of VM's are:
+        </p>
+        <p><b>Isolation</b>: Each VM is isolated from the host system and other VMs, providing a secure environment for running applications and operating systems.</p>
+        <p><b>Hardware Independence</b>: VMs emulate hardware, allowing them to run different operating systems and applications regardless of the underlying physical hardware.</p>
+        <p><b>Flexibility</b>: VMs can be easily created, configured, and deleted, providing flexibility for various use cases like testing, development, and deployment.</p>
+        <p>There are 2 types of hypervisor</p>
+        <p><b>Type 1 (Bare-Metal) Hypervisors</b>: These run directly on the physical hardware and manage the guest operating systems. Examples include VMware ESXi and Microsoft Hyper-V.</p>
+        <p><b>Type 2 (Hosted) Hypervisors</b>: These run on a host operating system and manage the guest operating systems as applications. Examples include VMware Workstation and Oracle VirtualBox.</p>
+        <h2>Benefits of Using Virtual Machines</h2>
+        <p>Virtual machines offer a versatile and powerful way to run multiple operating systems on a single physical machine, test software in different environments without needing multiple devices, support legacy applications by running older operating systems, enhance security by isolating potentially harmful files and applications within a VM environment.</p>
+        <h2>Setting up a Virtual Machine (VirtualBox)</h2>
+        <p>VirtualBox is an open source Virtual Machine program from Oracle. It allows users to virtually install many operating systems on virtual drives, including Windows, Linux, and more. Since VirtualBox runs on Windows, Linux, and Mac, the process for setting up a virtual machine is pretty much the same in each operating system.</p>
+        <p>Start with downloading and installing VirtualBox. You can download it at <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox Downloads</a>.</p>
+        <p>You will also need to download an .iso file for the operating system that you want to run in your virtual machine. For instance, you can download a <a href="https://www.microsoft.com/en-us/software-download/windows10ISO">Windows 10</a> .iso file in this link </p>
+        <p>This guide will be in a machine running Windows 11 and we will run Linux Ubunto Desktop 24.04LTS in our VM, the steps should be similar if you're using other operating system(OS) or want to run a different OS in your VM. </p>
+        <h2>
+            Instalation
+        </h2>
+        <p>Once you have you Virtual Box (VB) executable and OS iso downloaded (instructions are mentioned before) run the VB windows installer and allow the app to make changes to your device. You should be welcomed by the wizard setup, just continue by pressing next</p>
+        <img src="images/vbinstalation.png" alt="VB icon">
+        <p>Here you'll select the feautures you want to install and the location, you can leave them at their default selection and path and press Next.</p>
+        <img src="images/install1.png" alt="isntalation intro">
+        <p>The next part of the wizard will warn you that the instalation process will turn off your internet for some time, advance by clicking on Next, on this next page you'll be asked to install some dependecies, proceed by clicking on Yes</p>
+        <img src="images/install2.png" alt="instalation progress">
+        <p> After clicking Install on the next page the installation should start. Once the instalation is complete the wizard asks if you want to start VB, you only need to click on Finish for the program to open.</p>
+        <img src="images/VM.png" alt="VM page">
+        <p> Click on Add and give a name to your VM, pick the iso file you downloaded before, fill the rest of the fields if necessary and click on Next</p>
+        <img src="images/VM1.png" alt="">
+        <p>On the next page you will write the login credentials and domain name you want to use on your VM</p>
+        <img src="images/VM2.png" alt="">
+        <p>After clicking on next you should see a page where theres sliders to pick the amount of base memory and processors (also known as RAM and Threads) you want to allocate to your VM, for Windows its recomended to have a minimum of 4GB or 4096MB and 4 CPU, to allocate that ammount of resources to your VM its recomended to have 8GB of total RAM in your system and a 8 Thread CPU. </p>
+        <p>Less demanding OS's like Linux Ubunto need much less RAM and Threads to run, I will allocate 3GB of RAM and 4 Threads since my PC has 16GB of total RAM and a 12 Thread CPU.</p>
+        <img src="images/VM3.png" alt="">
+        <p>On the next screen you will chose the ammount of storage to give to your virtual disk in your VM, for windows have at least 16GB, but more than 60GB if you want to install many programs on your VM, for linux I'm going to have 5GB</p>
+        <img src="images/VM4.png" alt="">
+        <p>After pressing next you will be presented with a summary screen, where you can review your global settings for your VM, press Finish to complete the setup</p>
+        <p> After this the VM should open automatically, if not, click on Power On and after a bit you should be presented with your OS instalation preferences, just walk thru them and you'll eventually have you OS running on a virtual machine. </p>
+        <img src="images/final.png" alt="">
+
+
+
+
+
+
+
+
+        
+        
+    </div>
+    <footer>
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2024 Copyright:
+            <a class="text-white" href="https://github.com/EdwardSagned">Eduardo Santos Branco</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        document.getElementById('toggle-dark-mode').addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            this.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Night Mode';
+        });
+    </script>
+</body>
+</html>

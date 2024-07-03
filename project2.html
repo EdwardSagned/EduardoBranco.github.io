@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build and Setup a Home Network</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'system-ui', sans-serif;
+            color: #333;
+            background-color: #fff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar {
+            background-color: #333;
+            color: #fff;
+        }
+        .navbar a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px 10px;
+        }
+        .content h1, .content h2, .content h3, .content h4, .content h5 {
+            color: #6a0dad;
+            font-weight: bold;
+        }
+        .content h1 {
+            padding-top: 1cm;
+            font-size: 3rem;
+        }
+        .content h2 {
+            font-size: 2.5rem;
+            margin-top: 20px;
+        }
+        .content h3 {
+            font-size: 2rem;
+            margin-top: 15px;
+        }
+        .content p {
+            text-align: justify;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        .quote-box {
+            background-color: #f9f9f9;
+            border-left: 10px solid #6a0dad;
+            margin: 20px 0;
+            padding: 20px;
+            font-style: italic;
+            color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .dark-mode {
+            background-color: #262626;
+            color: #ccc;
+        }
+        .dark-mode .quote-box {
+            background-color: #333;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+            <a class="navbar-brand" href="index.html">Eduardo Santos Branco</a>
+            <button class="btn btn-outline-light ml-auto" id="toggle-dark-mode">Night Mode</button>
+        </nav>
+    </header>
+    <div class="content container">
+        <h1>Build and Setup a Home Network</h1>
+        <div class="quote-box">
+            <p>If you follow this tutorial, you'll be able to build your own safe home network in a budget.</p>
+        </div>
+        <img src="images/router.jpg" alt="Project Image">
+        <p>Nowadays, it's widely recognized that big corporations prioritize maximizing profits, often overwhelming free users with unnecessary features, products, and services. ISPs (Internet Service Providers) are notorious for including services such as routing cables or setting up routers. This also raises privacy concerns. This tutorial will guide you through a quick and easy way to pick and build your own home network (LAN), you'll still need an ISP to connect your network to the broader Internet (WAN) unfortunately.</p>
+        <p>It's important to highlight that this is a solution for homes or small offices. There are other guides online, we recommend you looking at <a href="https://www.techtarget.com/searchnetworking/tip/Tips-for-setting-up-a-home-network">TechTarget</a> and <a href="https://www.makeuseof.com/home-network-setup-diagrams/">MakeUseOf</a> pages.</p>
+        <p>
+            A home network system consists of various devices linked together on the same network, allowing them to communicate with each other. These devices can include computers, printers, mobile devices, gaming consoles, and any other Internet of Things (IoT) gadgets you might have at home. You can connect these devices using cables for a wired setup or use Wi-Fi for a wireless connection. This network setup enables you to manage and secure all your devices from a central point, ensuring seamless communication and control across your home.
+        </p>
+        <p>
+            A LAN (Local Acess Network) its a network that connects devices within a limited geographical area, such as a home, office, or campus.
+            A WAN (Wide Acess Network) its a network that covers a much larger geographical area, potentially spanning cities, countries, or even continents, typically refered as the broader Internet.
+        </p>
+        <h2>Budgeting and Scaling</h2>
+        <p>When building a home network on a budget, it is crucial to consider your financial limits and the scale of your network. The scale can be broken down into three main factors: physical size, number of clients, and throughput/bandwidth.</p>
+        <h2>Physical Size</h2>
+        <p>The physical size of your network space is essential. Different setups are required depending on whether you need a network for a small apartment, a two-story townhouse, or a company office.</p>
+        <p><b>Small Apartment or Single-Story House </b>: For small spaces with a limited budget, using the ISP-provided modem-router-switch combination is often sufficient.</p>
+        <p><b>Larger Homes</b>: Additional or better access points are necessary. It's recommend to use mesh access point systems, which ensure seamless coverage throughout the entire house.</p>
+        <p><b>Detached Areas or Outdoor Spaces</b>: For areas like detached garages or outdoor spaces, long-range access points are ideal. For security cameras, consider running Ethernet cables and using Power over Ethernet (PoE).</p>
+        <h2>Number of Clients</h2>
+        <p>The number of devices or clients connecting to your network is another crucial factor.</p>
+        <p><b>Small Households</b>: For a family of four, a simple setup with an ISP modem-router and a 200Mb contract should suffice.</p>
+        <p><b>Larger Homes or Comunities</b>: For common spaces for every person there is 3 to 4 devices if you have more than 8 people and or about 32 devices using the internet including streaming videos or downloading files its recommended to have a better ISP contract per example 1Gb upload and download aswell as having better acess points that support 5Ghz and MU-MIMO.  
+        <p><b>Large Companies</b>: For environments with more devices, such as businesses with more than 100 employees, additional infrastructure is needed. This includes higher capacity enterprise switches, access points, and more robust networking equipment.</p>
+        <h2>Throughput/Bandwidth</h2>
+        <p>Throughput and bandwidth refer to the amount of data transferred per second. High-bandwidth activities, like streaming high-quality videos or downloading large files, benefit from greater bandwidth.</p>
+        <p><b>Home Use</b>: For most households, Cat5e Ethernet cabling is recommended, as it supports speeds up to 1Gbps this can be future-proof because the bandwidth used by aplications, sites and files as been going up exponentially over the years, this is adequate for a family of five with advanced networking needs like a NAS (Network Attached Storage) for high-quality media. A family of five typically needs about 500Mbps download and upload speeds from their ISP.</p>
+        <p><b>Small Businesses</b>: Similar guidelines apply as for home use, but with higher demands, consider investing in 2.5Gbps or 10Gbps cabling and switches.</p>
+        <p><b>Larger Companies</b>: For larger businesses such as in company offices, where many people are constantly online and transferring files, higher bandwidth is necessary. We recommend switches supporting 2.5Gbps or 10Gbps and a business-class ISP contract offering speeds up to 2Gbps. For environments with over 250 connected devices, enterprise-grade access points are essential.</p>
+        <h2>Setting Up Your Home Network</h2>
+        <h3>1. Choose Your Equipment</h3>
+        <p>First, you'll need to choose the right equipment for your home network. This includes a router, and possibly some switches and access points. Make sure your router supports the Wi-Fi you want, has enough ports for your wired connections, and has the security and features you want.</p>
+        <p>If you want to connect to the Internet (WAN) you'll need a modem which is provided by your ISP, you can ask to set it up in bridge mode if its a combination or AIO (all in one) device. This makes it so it only acts as the modem and leaves the router and switching roles to the devices you already own.</p>
+        <p>There are devices that have multiple roles, the modems provided by your ISP normally are AIO or combination devices and act as routers, switches and acess points all in one device.</p>    
+        <h3>2. Network Typology</h3>
+        <p>In networking terminology, both "net" and "web" imply an interconnected system. Just as in physical nets or webs, not every point or node is connected to every other point directly. The structure governing these interconnections is known as network topology. Different types of topologies dictate how devices are connected and interact with each other.</p>
+        <p>Network topology refers to the arrangement of different elements (links, nodes, etc.) in a computer network. Common types of network topologies include:</p>
+            <p>Bus Topology: All devices are connected to a single central cable, known as the bus or backbone.</p>
+            <p>Star Topology: Each device is connected to a central hub or switch, forming a star-like shape.</p>
+            <p>Ring Topology: Devices are connected in a circular fashion, with each device having exactly two neighbors.</p>
+            <p>Mesh Topology: Every device is connected to every other device, providing high redundancy and reliability.</p>
+            <p>Tree Topology: A hierarchical topology that combines characteristics of star and bus topologies.</p>
+            <p>Hybrid Topology: A combination of two or more different types of topologies.</p>
+            <p>For home use, we recommend star or hybrid topology. This topology is ideal for home networks due to its simplicity, ease of setup, and reliability. Each device (e.g., computers, smartphones, smart TVs) connects to a central hub, the switch or router or combination router-switch connects to the modem and thus to the broaded Internet.</p>            
+        <h3>3. Configure the Router</h3>
+        <p>To configure your network settings, access the router's settings via a web browser and configure the network name (SSID) and password. Set up any additional security features such as WPA3 encryption and a guest network if needed.</p>
+        <h3>4. Connect Devices</h3>
+        <p>Start connecting your devices to the network. For wired connections, use Ethernet cables to connect devices directly to the router or switches. It's important that use the right type of cables for your deployment, probably the best option for you is Cat5e twisted pair cables, for more information on cables go to <a href="https://tripplite.eaton.com/products/ethernet-cable-types">Tripplite</a>. For wireless connections, search for the network name standing next to the acess point and enter the password on your devices. The wireless conection is weaker the further away you are from the acess point, having obstrusions like walls and having eletromagnetic noise like high power tools or other devices on your acess point range will impact the range and speeds of your connection. For more details on noise visit <a href="https://www.promptlink.com/media-library/blog/what-is-broadband-network-noise-and-why-is-it-difficult-to-find.html">Promptlink</a>. Its a good practice to keep lower bandwith and untrusted devices on a guest network and having 2.4Ghz. The main network should be reserved for trusted devices, high bandwith devices like your desktop, laptop, server or streaming box should be connected to 5Ghz or higher.</p>
+        <p>Here is an example network that follows our recommendations:</p>
+        <img src="images/final.jpg" alt="Project Image">
+        <h3>5. Test the Network</h3>
+        <p>Once all devices are connected, test the network by browsing the internet, streaming videos, and transferring files between devices. Make sure the connection is stable and speeds are as expected.</p>
+        <h3>6. Security</h3>
+        <p>It's important to have a WPA2 or WPA2 security and a guest network. You can also setup your network for safer Firewall, VPN, DNS and VLANS, aswell as setting up your own server on you network for other uses, per example, as a NVR (Network Video Recorder) or Network Supervisor or NAS (Network Attached Storage) for file sharing and backups. Having a server allows devices on the network to access the files or services hosted on the server, you can have shared files and store backups centrally.</p>
+        
+        
+    </div>
+    <footer>
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2024 Copyright:
+            <a class="text-white" href="https://github.com/EdwardSagned">Eduardo Santos Branco</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        document.getElementById('toggle-dark-mode').addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            this.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Night Mode';
+        });
+    </script>
+</body>
+</html>

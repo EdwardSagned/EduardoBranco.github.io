@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+header {
+    background-color: #333;
+    color: #fff;
+}
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.landing {
+    background: url(../images/me.png) no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+.landing h1 {
+    font-size: 4rem;
+    font-family: 'Times New Roman', serif;
+    animation: fadeInDown 2s;
+}
+.landing p {
+    font-size: 1.5rem;
+    font-family: 'Georgia', serif;
+    animation: fadeInUp 2s;
+}
+.section {
+    padding: 40px 0;
+}
+.section h2 {
+    color: #6a0dad;
+    font-size: 3rem;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-weight: 300;
+}
+.section p {
+    line-height: 1.6;
+}
+.section i {
+    color: #6a0dad;
+    font-size: 3rem;
+}
+.card {
+    border: none;
+    margin-bottom: 30px;
+}
+.card-body {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+.card-body:hover {
+    transform: scale(1.05);
+}
+.cv-section, .quote-section {
+    display: flex;
+    align-items: center;
+}
+.cv-section .cv-text, .quote-section .quote-text {
+    flex: 7;
+    padding-right: 20px;
+}
+.cv-section .cv-image, .quote-section .quote-image {
+    flex: 3;
+    text-align: center;
+    position: relative;
+}
+.cv-section .cv-image img, .quote-section .quote-image img {
+    max-width: 100%;
+    transition: opacity 0.3s;
+}
+
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.download-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #6a0dad;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image-wrapper:hover .download-icon {
+    opacity: 1;
+}
+
+.image-wrapper img {
+    display: block;
+}
+
+
+
+
+.quote-text {
+    font-style: italic;
+    color: #6a0dad;
+    border-left: 3px solid #6a0dad;
+    padding-left: 15px;
+    font-size: 1.2rem;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.social-icons i {
+    color: #6a0dad;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+body.dark-mode {
+    background-color: #262626;
+    color: #fff;
+}
+
+
+.dark-mode .navbar {
+    background-color: #262626;
+}
+
+.dark-mode .quote-section {
+    background-color: #262626;
+}
+
+.dark-mode .cv-section {
+    background-color: #262626;
+}
+.dark-mode .projects-section {
+    
+    color: #333;
+}
+
+.cv-text .fa-user-circle {
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+
+.cv-text .d-flex {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .cv-text {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 768px) {
+    .landing h1 {
+        font-size: 3rem;
+    }
+    .landing p {
+        font-size: 1.2rem;
+    }
+    .section h2 {
+        font-size: 2.5rem;
+    }
+    .cv-section, .quote-section {
+        flex-direction: column;
+    }
+    .cv-section .cv-text, .cv-section .cv-image, .quote-section .quote-text, .quote-section .quote-image {
+        flex: 1;
+        padding: 0;
+    }
+}
