@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Diagnostics Tools for Windows</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'system-ui', sans-serif;
+            color: #333;
+            background-color: #fff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar {
+            background-color: #333;
+            color: #fff;
+        }
+        .navbar a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px 10px;
+        }
+        .content h1, .content h2, .content h3, .content h4, .content h5 {
+            color: #6a0dad;
+            font-weight: bold;
+        }
+        .content h1 {
+            padding-top: 1cm;
+            font-size: 3rem;
+        }
+        .content h2 {
+            font-size: 2.5rem;
+            margin-top: 20px;
+        }
+        .content h3 {
+            font-size: 2rem;
+            margin-top: 15px;
+        }
+        .content p {
+            text-align: justify;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        .quote-box {
+            background-color: #f9f9f9;
+            border-left: 10px solid #6a0dad;
+            margin: 20px 0;
+            padding: 20px;
+            font-style: italic;
+            color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .dark-mode {
+            background-color: #262626;
+            color: #ccc;
+        }
+        .dark-mode .quote-box {
+            background-color: #333;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+            <a class="navbar-brand" href="index.html">Eduardo Santos Branco</a>
+            <button class="btn btn-outline-light ml-auto" id="toggle-dark-mode">Night Mode</button>
+        </nav>
+    </header>
+    <div class="content container">
+        <h1>Etsy Shop</h1>
+        <div class="quote-box">
+            <p>This is just a blog about my experience when I decided making an online Etsy shop.</p>
+            
+        </div>
+        <p>Here it is, <a href="https://radiantroamers.etsy.com">RadiantRoamers</a>!</p>
+        <p>To build this shop, first I had to come up with a brand, I already knew I wanted to sell shirts, also I knew that white shirts are more aesthetic and probably sell more, I came up with the RadiantRoamers because I wanted to mention Radiance wich is the name of a boss in my favourite game "Hollow Knigh" then I just added Roamers to give an idea of movement to lighten the brand even more.</p>
+        <p>On the brand design I decided to use more of a streamline font and yellow and white when possible.</p>
+        <img src="images/RRbrand.png" alt="radiant roamers board">
+
+        <p>Here are some of the designs, I decided to not re-invent the wheel and go with known designs from famous media.</p>
+        <img src="images/RRshirts.png" alt="RR shirts">
+        <p>I also advertised on pinterest which is the way most people visit my website.</p>
+        <img src="images/RRpinterest.png" alt="RR page on pinterest">
+
+    </div>
+    <footer>
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2024 Copyright:
+            <a class="text-white" href="https://github.com/EdwardSagned">Eduardo Santos Branco</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        document.getElementById('toggle-dark-mode').addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            this.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Night Mode';
+        });
+    </script>
+</body>
+</html>
